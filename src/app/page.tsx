@@ -215,7 +215,7 @@ export default function Home() {
                 </a>
                 
                 <a 
-                  href="https://linkedin.com/in/veronica-fong" 
+                  href="https://www.linkedin.com/in/veronica-fong-75475b212/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 p-4 bg-stone-800 text-white border border-stone-700 rounded-xl hover:bg-stone-700 transition-colors font-medium"
