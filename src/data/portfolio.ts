@@ -267,42 +267,6 @@ export const content = {
         }
       ]
     },
-    volunteer: {
-      title: "Bénévolat",
-      items: [
-        {
-          role: "Preneuse de Notes",
-          company: "Université d'Ottawa",
-          location: "Ottawa (ON)",
-          period: "09/2024 – Présent",
-          responsibilities: [
-            "Soutenir l'apprentissage d'un autre étudiant en fournissant des notes de cours claires, complètes et transmises hebdomadairement."
-          ]
-        },
-        {
-          role: "Étudiante Pro Bono du Canada",
-          company: "Étudiant-e-s pro bono du Canada (EPBC) - Université d'Ottawa",
-          location: "Ottawa (ON)",
-          period: "09/2025 – Présent",
-          responsibilities: [
-            "Contribuer à la conception d'une capsule vidéo animée et d'un signet de ressources juridiques destinés à l'accueil des femmes immigrantes de l'Outaouais.",
-            "Effectuer des recherches approfondies et vulgariser des notions juridiques complexes liées au statut de résidence permanente.",
-            "Collaborer étroitement avec la superviseure juridique et l'organisme partenaire pour assurer la qualité et l'accessibilité de l'information."
-          ]
-        },
-        {
-          role: "VP première année et VP finances",
-          company: "Association des étudiants asiatiques en droit civil de l'Université d'Ottawa",
-          location: "Ottawa (ON)",
-          period: "09/2024 – Présent",
-          responsibilities: [
-            "Administrer le budget de l'association tout en assurant un suivi rigoureux des fonds et la transparence des rapports financiers.",
-            "Superviser les dépenses pour divers projets et événements étudiants.",
-            "Organiser des événements de réseautage pour enrichir l'expérience étudiante et favoriser un climat d'inclusion et d'appartenance."
-          ]
-        }
-      ]
-    },
     additionalExperience: {
       title: "Autre Expérience",
       items: [
