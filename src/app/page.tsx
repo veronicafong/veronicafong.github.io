@@ -13,6 +13,10 @@ export default function Home() {
     setLang(prev => prev === 'en' ? 'fr' : 'en');
   };
 
+  const resumeUrl = lang === 'en' 
+    ? '/Veronica_Fong_CV (EN).pdf' 
+    : '/Veronica_Fong_CV (FR).pdf';
+
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-stone-200">
       {/* Navigation */}
@@ -38,7 +42,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section - Full Screen Split */}
-      <section className="relative min-h-screen flex items-center bg-stone-50 overflow-hidden">
+      <section className="relative min-h-screen flex items-center bg-stone-50 overflow-hidden pt-20">
         {/* Text Content - Left Side */}
         <div className="w-full lg:w-1/2 relative z-10 px-6 sm:px-12 lg:pl-32 lg:pr-16 pt-24 flex flex-col justify-center h-full">
           <div className="space-y-8 animate-slide-up">
@@ -55,7 +59,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a 
-                href="/resume.pdf" 
+                href={resumeUrl} 
                 target="_blank"
                 className="inline-flex items-center gap-2 px-8 py-3.5 bg-stone-900 text-stone-50 rounded-full font-medium hover:bg-stone-800 transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
@@ -74,7 +78,7 @@ export default function Home() {
         </div>
 
         {/* Image - Right Side with Slant */}
-        <div className="absolute top-0 right-0 w-full lg:w-[55%] h-full hidden lg:block">
+        <div className="absolute top-20 right-0 w-full lg:w-[55%] h-full hidden lg:block">
            <div 
              className="absolute inset-0 bg-stone-200 h-full w-full"
              style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)" }}
@@ -123,6 +127,32 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* Volunteer Section (French only) */}
+        {'volunteer' in t && (
+          <section id="volunteer" className="scroll-mt-32 space-y-10 animate-slide-up delay-250">
+            <h2 className="font-serif text-4xl font-bold text-stone-900 border-b border-stone-200 pb-6">{t.volunteer.title}</h2>
+            
+            <div className="grid gap-8">
+              {t.volunteer.items.map((item, index) => (
+                <div key={index} className="group p-6 -mx-6 rounded-2xl hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-stone-100">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                    <h3 className="text-xl font-bold text-stone-900 group-hover:text-stone-700 transition-colors">{item.role}</h3>
+                    <span className="text-stone-500 font-medium text-sm bg-stone-100 px-3 py-1 rounded-full">{item.period}</span>
+                  </div>
+                  <div className="text-stone-700 font-medium mb-4">{item.company} • {item.location}</div>
+                  {item.responsibilities.length > 0 && (
+                    <ul className="list-disc list-outside ml-5 text-stone-600 space-y-2">
+                      {item.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="leading-relaxed">{resp}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Additional Experience Section */}
         <section id="additional-experience" className="scroll-mt-32 space-y-10 animate-slide-up delay-300">
